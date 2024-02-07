@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-y: scroll;
+    box-sizing: border-box;
+    font-size: 0.875rem;
+    background-image: linear-gradient(to right top, #000000, #101010, #191919, #232323, #2c2c2c);
+    height: 100vh;
+    font-family: 'Cute Font', sans-serif;
+}
+
+main {
+    background-image: linear-gradient(to right top, #000000, #101010, #191919, #232323, #2c2c2c);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%;
+    width: 37.5rem;
+    margin: 0 auto;
+    margin-top: 14rem;
+    margin-bottom: 10%;
+    border-radius: 15px;
+}
+
+.imgContainer {
+    background-image: url("./Assets/Tom-Ford-Black.png");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    border-radius: 15px 0 0 15px;
+    background-repeat: no-repeat;
+}
+
+.productDetails {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.4rem;
+}
+
+h1 {
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 1.5rem;
+    color: red;
+}
+
+h3 {
+    font-size: 2.2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.productDetails p {
+    font-weight: lighter;
+    font-size: 1.1rem;
+    color: skyblue;
+    line-height: 1.2rem; 
+    text-transform: capitalize;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.price p {
+    color: white;
+    font-size: 1.9rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.price p span {
+    font-weight: lighter;
+    color: yellow;
+    text-decoration: line-through;
+    font-size: 1rem;
+    padding-top: 2px;
+}
+
+button {
+    cursor: pointer;
+    border: 2px solid white;
+    background-color: darkblue;
+    color: white;
+    font-weight: lighter;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    padding: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all ease-in-out 0.2s;
+}
+
+@media (hover:hover) {
+    button:hover {
+        transition: all ease-in-out 0.2s;
+        background-color: green;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    main {
+        margin-top: 20%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15rem 1fr;
+        height: 70vh;
+    }
+    .imgContainer {
+        background-image: url("./Assets/Tom-Ford-Black.png");
+        border-radius: 15px 15px 0 0;
+        background-position: top middle;
+    }
+}
